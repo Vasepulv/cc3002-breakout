@@ -73,5 +73,4 @@ public interface Level {
      */
     void setNextLevel(Level level);
 
-    int getLevelPoints();
 }

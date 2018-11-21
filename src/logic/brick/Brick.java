@@ -34,4 +34,5 @@ public interface Brick {
      * @return the remaining hits to destroy de brick
      */
     int remainingHits();
+
 }

@@ -72,7 +72,7 @@ public class HomeworkTwoFacade {
      * @return true if the current level's next level is playable, false otherwise
      */
     public boolean hasNextLevel() {
-        return game.getCurrentLevel().hasNextLevel();
+        return game.getCurrentLevel().getNextLevel().isPlayableLevel();
     }
 
     /**
@@ -135,7 +135,7 @@ public class HomeworkTwoFacade {
      * @return the number of points in the current level
      */
     public int getLevelPoints() {
-        return game.getCurrentLevel().getLevelPoints();
+        return game.getCurrentLevel().getPoints();
     }
 
     /**
