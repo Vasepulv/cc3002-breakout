@@ -34,6 +34,9 @@ public class Game implements Observer {
      * @return true if the game has a winner, false otherwise
      */
     public boolean winner() {
+        if(score>0 && !this.level.isPlayableLevel()){
+            return true;
+        }
         return false;
     }
 
@@ -52,7 +55,6 @@ public class Game implements Observer {
      * Pass to the next level of the current {@link Level}. Ignores all conditions and skip to the next level.
      */
     public void goNextLevel() {
-
         level= this.getCurrentLevel().getNextLevel();
     }
 
@@ -153,6 +155,17 @@ public class Game implements Observer {
      */
     public void glassBrickIsDestroyed(GlassBrick glassBrick) {
         score=score+glassBrick.getScore();
+        check();
+    }
+
+    /**
+     * Checks whether certain conditions have met, mainly whether all the possible score has been obtained in the level.
+     * This method changes the level to the next one.
+     */
+    private void check() {
+        if(this.level.isPlayableLevel() && this.level.getPoints()==0){
+            goNextLevel();
+        }
     }
 
     /**
@@ -162,6 +175,7 @@ public class Game implements Observer {
      */
     public void woodenBrickIsDestroyed(WoodenBrick woodenBrick){
         score=score+woodenBrick.getScore();
+        check();
     }
 
     /**

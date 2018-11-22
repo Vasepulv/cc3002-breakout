@@ -92,8 +92,10 @@ public class PlayableLevel extends AbstractLevel {
     @Override
     public int getNumberOfBricks() {
         int conteo=0;
-        for(int i=0;i<bricks.size();i++){
-            conteo++;
+        for (Brick brick : bricks) {
+            if (!brick.isDestroyed()) {
+                conteo++;
+            }
         }
         return conteo;
     }
@@ -147,7 +149,8 @@ public class PlayableLevel extends AbstractLevel {
     public int getPoints() {
         int conteo=0;
         for (Brick brick : bricks) {
-            conteo = brick.getScore() + conteo;
+            if(!brick.isDestroyed()){
+            conteo = brick.getScore() + conteo;}
         }
         return conteo;
     }
