@@ -13,7 +13,7 @@ import java.util.List;
  *
  * @author Juan-Pablo Silva
  */
-public class HomeworkTwoFacade {
+public class HomeworkTwoFacade{
     /**
      * Instance of the game controller.
      *

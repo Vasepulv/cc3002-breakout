@@ -6,15 +6,16 @@ import logic.brick.Brick;
 public class BrickComponent extends Component {
     public Brick brick;
 
-    public BrickComponent(Brick brick){
-        this.brick=brick;
+    public BrickComponent(){
+
     }
 
 
     public void hit(){
-        brick.hit();
-        if(brick.isDestroyed()){
+        getEntity().removeFromWorld();
+    }
 
-        }
+    public void destroy(){
+        hit();
     }
 }

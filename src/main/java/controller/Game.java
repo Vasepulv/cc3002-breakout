@@ -1,7 +1,7 @@
 package controller;
 
+
 import View.GameApp;
-import com.almasb.fxgl.ui.UIController;
 import logic.brick.Brick;
 import logic.level.EmptyLevel;
 import logic.level.Level;
@@ -16,17 +16,20 @@ import java.util.Observer;
  *
  * @author Juan-Pablo Silva
  */
-public class Game implements Observer, LevelUpdateReceiver {
+public class Game extends Observable implements Observer, LevelUpdateReceiver {
     private Level currentLevel;
     private int cumulativeScore;
     private int ballsLeft;
     private boolean winner;
+    private GameApp gameApp;
 
     public Game(int balls) {
         ballsLeft = balls;
         currentLevel = new EmptyLevel();
         cumulativeScore = 0;
         winner = false;
+        gameApp=new GameApp();
+        addObserver(gameApp);
     }
 
     public List<Brick> getBricks() {
@@ -52,6 +55,7 @@ public class Game implements Observer, LevelUpdateReceiver {
     public void setLevel(Level level) {
         currentLevel = level;
         level.assignGame(this);
+        notifyObservers();
     }
 
     public int getPoints() {
@@ -65,6 +69,8 @@ public class Game implements Observer, LevelUpdateReceiver {
     public void dropBall() {
         if (ballsLeft > 0) {
             ballsLeft--;
+            setChanged();
+            notifyObservers();
         }
     }
 
@@ -82,6 +88,8 @@ public class Game implements Observer, LevelUpdateReceiver {
     @Override
     public void scoreUpdate(ScoreUpdate scoreUpdate) {
         cumulativeScore += scoreUpdate.getScore();
+        setChanged();
+        notifyObservers();
     }
 
     @Override
@@ -89,12 +97,17 @@ public class Game implements Observer, LevelUpdateReceiver {
         goNextLevel();
         if (!hasCurrentLevel()) {
             winner = true;
+            setChanged();
+            notifyObservers();
         }
+
     }
 
     @Override
     public void metalBrickDestroyedUpdate(MetalBrickDestroyedUpdate metalBrickDestroyedUpdate) {
         ballsLeft++;
+        setChanged();
+        notifyObservers();
     }
 
     public void addPlayingLevel(Level level) {
@@ -104,4 +117,5 @@ public class Game implements Observer, LevelUpdateReceiver {
     public boolean winner() {
         return winner;
     }
+
 }

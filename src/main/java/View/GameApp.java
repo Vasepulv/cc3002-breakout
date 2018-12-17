@@ -4,7 +4,6 @@ import com.almasb.fxgl.app.FXGL;
 import com.almasb.fxgl.app.GameApplication;
 import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.entity.EntityFactory;
-import com.almasb.fxgl.entity.Level;
 import com.almasb.fxgl.input.Input;
 import com.almasb.fxgl.input.UserAction;
 import com.almasb.fxgl.physics.CollisionHandler;
@@ -15,20 +14,34 @@ import com.almasb.fxgl.ui.UI;
 import com.almasb.fxgl.ui.UIController;
 import controller.Game;
 import facade.HomeworkTwoFacade;
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.scene.control.Label;
 import javafx.scene.input.KeyCode;
+import javafx.scene.input.MouseButton;
+import javafx.scene.input.MouseDragEvent;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
-import javafx.scene.text.Text;
-import logic.level.BreakoutLevel;
+import logic.level.Level;
+import logic.update.LevelUpdateReceiver;
+import logic.update.MaxLevelScoreReachedUpdate;
+import logic.update.MetalBrickDestroyedUpdate;
+import logic.update.ScoreUpdate;
 
 import java.util.Map;
+import java.util.Observable;
+import java.util.Observer;
 
-public class GameApp extends GameApplication {
-    private Level1 level1;
-    private int balls;
+public class GameApp extends GameApplication implements Observer {
+    private LevelView level1;
     private HomeworkTwoFacade controller;
+    private Label score;
+    private Label balls;
+    private Label totalScore;
+    private Label actualLevel;
+    private Label labelScore;
+    private Label labelBalls;
+    private Label labelTotalScore;
+
 
     @Override
     protected void initSettings(GameSettings gameSettings) {
@@ -51,27 +64,51 @@ public class GameApp extends GameApplication {
         Entity ball=GameFactory.newBall(290,530);
         getGameWorld().addEntities(player,background,walls,ball);
         initLevel();
-
     }
 
     @Override
     protected void initGameVars(Map<String, Object> vars) {
         vars.put("Score",0);
+        vars.put("TotalScore",0);
         vars.put("Level",0);
         vars.put("Balls",3);
     }
 
     private void initLevel() {
-        level1=new Level1();
+        controller=new HomeworkTwoFacade();
+        Level level=controller.getCurrentLevel();
+        controller.setCurrentLevel(level);
+        level1=new LevelView(level);
         level1.init();
+    }
 
+    private void setALevel(Level level){
+        level1=new LevelView(level);
+        level1.init();
     }
 
     @Override
     protected void initUI() {
-        controller=new HomeworkTwoFacade();
+        labelBalls=new Label("Balls");
+        labelScore=new Label("Score");
+        labelTotalScore=new Label("TotalScore");
 
+        score=new Label();
+        balls=new Label();
+        totalScore=new Label();
 
+        HBox hBox=new HBox(20);
+        IntegerProperty integerProperty=new SimpleIntegerProperty(getGameState().getInt("Score"));
+        score.textProperty().bind(integerProperty.asString());
+
+        IntegerProperty integerProperty1=new SimpleIntegerProperty(getGameState().getInt("Balls"));
+        balls.textProperty().bind(integerProperty1.asString());
+
+        IntegerProperty integerProperty2=new SimpleIntegerProperty(getGameState().getInt("TotalScore"));
+        totalScore.textProperty().bind(integerProperty2.asString());
+
+       hBox.getChildren().addAll(labelScore,score,labelBalls,balls,labelTotalScore,totalScore);
+        getGameScene().addUINode(hBox);
     }
 
     @Override
@@ -111,10 +148,19 @@ public class GameApp extends GameApplication {
                 addBall();
             }
         },KeyCode.M);
+
+        input.addAction(new UserAction("Testing") {
+            @Override
+            protected void onActionBegin() {
+
+            }
+        },MouseButton.PRIMARY);
     }
 
     private void nextLevel() {
-
+        Level level=controller.newLevelWithBricksNoMetal("Level1",60,0.5,1);
+        level1=new LevelView(level);
+        level1.init();
     }
 
 
@@ -136,17 +182,18 @@ public class GameApp extends GameApplication {
         getPhysicsWorld().addCollisionHandler(new CollisionHandler(GameType.BALL,GameType.BRICK) {
             @Override
             protected void onCollisionBegin(Entity ball, Entity brick) {
-
-                //brick.getComponent(BrickComponent.class).hit();
+                brick.getComponent(BrickComponent.class).hit();
+                ball.getComponent(PhysicsComponent.class).setLinearVelocity(60*5,-5*60);
             }
         });
-
-
     }
 
     private void addBall(){
-        if(balls>0){
-
+        if(getGameState().getInt("Balls")>0){
+            Entity player=getGameWorld().getSingleton(GameType.PLAYER).get();
+            Entity ball=GameFactory.newBall(player.getX()+40,player.getY()-20);
+            getGameWorld().addEntity(ball);
+            controller.dropBall();
         }
         else{
             showGameOver();
@@ -156,13 +203,36 @@ public class GameApp extends GameApplication {
     private void showGameOver(){
         getDisplay().showConfirmationBox("Game Over. Try Again?",yes->{
             if (yes){
-                getGameWorld().getEntitiesCopy().forEach(Entity::removeFromWorld);
+                getGameWorld().getEntitiesByType(GameType.PLAYER,GameType.BRICK,GameType.WALL).forEach(Entity::removeFromWorld);
+
             }
             else{
                 int score=getGameState().getInt("Score");
-                //
+                exit();
             }
         });
+    }
+
+    private void showWinner(){
+        getDisplay().showConfirmationBox("Congratulations. You have beaten the game. Try again?", yes ->{
+            if (yes){
+                getGameWorld().getEntitiesCopy().forEach(Entity::removeFromWorld);
+
+            }
+            else{
+                exit();
+            }
+        });
+    }
+
+
+    @Override
+    public void update(Observable o, Object arg) {
+        if(o instanceof Game){
+
+
+        }
+
     }
 
 

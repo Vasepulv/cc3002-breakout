@@ -64,11 +64,10 @@ public class GameFactory implements EntityFactory{
         physics.setBodyType(BodyType.STATIC);
         return Entities.builder()
                 .type(GameType.BRICK)
-                //.from(data)
-                .viewFromNode(new Rectangle(90,40,Color.GRAY))
                 .with(new CollidableComponent(true))
                 .bbox(new HitBox(BoundingShape.box(90,40)))
                 .with(physics)
+                .with(new BrickComponent())
                 .build();
     }
 
