@@ -12,6 +12,12 @@ import controller.Game;
 import javafx.geometry.Point2D;
 import javafx.scene.control.Control;
 
+/**
+ * This class represents the actions of the Player entities.
+ *
+ * @author Valentina Sepulveda
+ * @version 1.0
+ */
 public class PlayerControl extends Component {
     private GameScene gameScene;
     private PhysicsComponent physics;

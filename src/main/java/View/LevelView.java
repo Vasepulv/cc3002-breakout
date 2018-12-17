@@ -9,17 +9,22 @@ import com.almasb.fxgl.physics.box2d.dynamics.BodyType;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
-import logic.brick.Brick;
 import logic.brick.GlassBrick;
 import logic.brick.MetalBrick;
 import logic.brick.WoodenBrick;
-import logic.level.BreakoutLevel;
 import logic.level.Level;
 
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
+/**
+ * This class represents the view of the Levels. This class constructs the visual representation of the levels.
+ *
+ * @author Valentina Sepulveda
+ * @version 1.0
+ */
 public class LevelView {
 
     List<Entity> bricks;
@@ -32,6 +37,7 @@ public class LevelView {
 
     public void init(){
         int n=level.getNumberOfBricks();
+        Collections.shuffle(level.getBricks());
         int k=n/10;
         Entity brick;
         int l=0;
@@ -41,6 +47,7 @@ public class LevelView {
                 brick.setPosition(i*60+5,j*30+50);
                 if(level.getBricks().get(l).getClass().equals(GlassBrick.class)){
                     brick.setView(new Rectangle(50,20, Color.LIGHTBLUE));
+                    //How to bind with a real brick???
                 }
                 else if(level.getBricks().get(l).getClass().equals(WoodenBrick.class)){
                     brick.setView(new Rectangle(50,20, Color.BROWN));

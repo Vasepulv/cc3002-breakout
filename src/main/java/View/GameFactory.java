@@ -2,6 +2,9 @@ package View;
 
 import com.almasb.fxgl.entity.*;
 import com.almasb.fxgl.entity.components.CollidableComponent;
+import com.almasb.fxgl.particle.Particle;
+import com.almasb.fxgl.particle.ParticleComponent;
+import com.almasb.fxgl.particle.ParticleEmitter;
 import com.almasb.fxgl.physics.BoundingShape;
 import com.almasb.fxgl.physics.HitBox;
 import com.almasb.fxgl.physics.PhysicsComponent;
@@ -11,6 +14,12 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 
+/**
+ * This class represents the factory of the elements in the game, like Bricks, Player (the bar), the Walls and the Bricks.
+ * @version 1.0
+ * @author Valentina Sepulveda
+ *
+ */
 public class GameFactory implements EntityFactory{
 
     @Spawns("Player")
@@ -68,6 +77,18 @@ public class GameFactory implements EntityFactory{
                 .bbox(new HitBox(BoundingShape.box(90,40)))
                 .with(physics)
                 .with(new BrickComponent())
+                .build();
+    }
+
+    public static Entity newParticles(){
+        ParticleEmitter emitter=new ParticleEmitter();
+        emitter.setStartColor(Color.web("ffffe0"));
+        emitter.setSize(3,5);
+
+        ParticleComponent particleComponent=new ParticleComponent(emitter);
+        particleComponent.setOnFinished(()->particleComponent.getEntity().removeFromWorld());
+        return Entities.builder()
+                .with(particleComponent)
                 .build();
     }
 

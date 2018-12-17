@@ -1,43 +1,44 @@
 package View;
 
-import com.almasb.fxgl.app.FXGL;
 import com.almasb.fxgl.app.GameApplication;
 import com.almasb.fxgl.entity.Entity;
-import com.almasb.fxgl.entity.EntityFactory;
 import com.almasb.fxgl.input.Input;
 import com.almasb.fxgl.input.UserAction;
 import com.almasb.fxgl.physics.CollisionHandler;
 import com.almasb.fxgl.physics.HitBox;
 import com.almasb.fxgl.physics.PhysicsComponent;
 import com.almasb.fxgl.settings.GameSettings;
-import com.almasb.fxgl.ui.UI;
-import com.almasb.fxgl.ui.UIController;
 import controller.Game;
 import facade.HomeworkTwoFacade;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import javafx.scene.control.Label;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseButton;
-import javafx.scene.input.MouseDragEvent;
 import javafx.scene.layout.HBox;
 import logic.level.Level;
-import logic.update.LevelUpdateReceiver;
-import logic.update.MaxLevelScoreReachedUpdate;
-import logic.update.MetalBrickDestroyedUpdate;
-import logic.update.ScoreUpdate;
+import logic.update.*;
 
 import java.util.Map;
 import java.util.Observable;
 import java.util.Observer;
 
-public class GameApp extends GameApplication implements Observer {
+/**
+ * This class represents the GUI of the game.
+ *
+ * @author Valentina Sepulveda
+ * @version 1.0
+ */
+public class GameApp extends GameApplication implements Observer, LevelUpdateReceiver {
     private LevelView level1;
     private HomeworkTwoFacade controller;
     private Label score;
     private Label balls;
     private Label totalScore;
     private Label actualLevel;
+    private Label labelLevel;
     private Label labelScore;
     private Label labelBalls;
     private Label labelTotalScore;
@@ -70,19 +71,13 @@ public class GameApp extends GameApplication implements Observer {
     protected void initGameVars(Map<String, Object> vars) {
         vars.put("Score",0);
         vars.put("TotalScore",0);
-        vars.put("Level",0);
+        vars.put("Level","Level 0");
         vars.put("Balls",3);
     }
 
     private void initLevel() {
         controller=new HomeworkTwoFacade();
         Level level=controller.getCurrentLevel();
-        controller.setCurrentLevel(level);
-        level1=new LevelView(level);
-        level1.init();
-    }
-
-    private void setALevel(Level level){
         level1=new LevelView(level);
         level1.init();
     }
@@ -92,10 +87,13 @@ public class GameApp extends GameApplication implements Observer {
         labelBalls=new Label("Balls");
         labelScore=new Label("Score");
         labelTotalScore=new Label("TotalScore");
+        labelLevel=new Label("Level Name");
+
 
         score=new Label();
         balls=new Label();
         totalScore=new Label();
+        actualLevel=new Label();
 
         HBox hBox=new HBox(20);
         IntegerProperty integerProperty=new SimpleIntegerProperty(getGameState().getInt("Score"));
@@ -107,7 +105,10 @@ public class GameApp extends GameApplication implements Observer {
         IntegerProperty integerProperty2=new SimpleIntegerProperty(getGameState().getInt("TotalScore"));
         totalScore.textProperty().bind(integerProperty2.asString());
 
-       hBox.getChildren().addAll(labelScore,score,labelBalls,balls,labelTotalScore,totalScore);
+        StringProperty stringProperty=new SimpleStringProperty(getGameState().getString("Level"));
+        actualLevel.textProperty().bind(stringProperty);
+
+       hBox.getChildren().addAll(labelScore,score,labelBalls,balls,labelTotalScore,totalScore,labelLevel,actualLevel);
         getGameScene().addUINode(hBox);
     }
 
@@ -158,9 +159,12 @@ public class GameApp extends GameApplication implements Observer {
     }
 
     private void nextLevel() {
-        Level level=controller.newLevelWithBricksNoMetal("Level1",60,0.5,1);
+        Level level=controller.newLevelWithBricksFull("Level1",40,0.5,1,1);
+        controller.setCurrentLevel(level);
         level1=new LevelView(level);
         level1.init();
+        getGameState().setValue("Level",level.getName());
+
     }
 
 
@@ -188,8 +192,12 @@ public class GameApp extends GameApplication implements Observer {
         });
     }
 
+
+
+
+
     private void addBall(){
-        if(getGameState().getInt("Balls")>0){
+        if(controller.getBallsLeft()>0){
             Entity player=getGameWorld().getSingleton(GameType.PLAYER).get();
             Entity ball=GameFactory.newBall(player.getX()+40,player.getY()-20);
             getGameWorld().addEntity(ball);
@@ -204,7 +212,7 @@ public class GameApp extends GameApplication implements Observer {
         getDisplay().showConfirmationBox("Game Over. Try Again?",yes->{
             if (yes){
                 getGameWorld().getEntitiesByType(GameType.PLAYER,GameType.BRICK,GameType.WALL).forEach(Entity::removeFromWorld);
-
+                startNewGame();
             }
             else{
                 int score=getGameState().getInt("Score");
@@ -217,7 +225,7 @@ public class GameApp extends GameApplication implements Observer {
         getDisplay().showConfirmationBox("Congratulations. You have beaten the game. Try again?", yes ->{
             if (yes){
                 getGameWorld().getEntitiesCopy().forEach(Entity::removeFromWorld);
-
+                startNewGame();
             }
             else{
                 exit();
@@ -228,12 +236,25 @@ public class GameApp extends GameApplication implements Observer {
 
     @Override
     public void update(Observable o, Object arg) {
-        if(o instanceof Game){
-
-
+        if(arg instanceof LevelUpdate){
+            ((LevelUpdate) arg).accept(this);
         }
 
     }
 
 
+    @Override
+    public void scoreUpdate(ScoreUpdate scoreUpdate) {
+        getGameState().setValue("Score",scoreUpdate);
+    }
+
+    @Override
+    public void maxLevelScoreUpdate(MaxLevelScoreReachedUpdate maxLevelScoreReachedUpdate) {
+       showWinner();
+    }
+
+    @Override
+    public void metalBrickDestroyedUpdate(MetalBrickDestroyedUpdate metalBrickDestroyedUpdate) {
+        getGameState().setValue("Balls",controller.getBallsLeft());
+    }
 }

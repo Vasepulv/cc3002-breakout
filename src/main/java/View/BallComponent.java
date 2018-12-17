@@ -5,6 +5,12 @@ import com.almasb.fxgl.entity.component.Component;
 import com.almasb.fxgl.physics.PhysicsComponent;
 import logic.brick.Brick;
 
+/**
+ * This class represents the actions of the Balls entities.
+ *
+ * @author Valentina Sepulveda
+ * @version 1.0
+ */
 public class BallComponent extends Component {
     PhysicsComponent physics;
 

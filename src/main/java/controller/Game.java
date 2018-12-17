@@ -89,7 +89,7 @@ public class Game extends Observable implements Observer, LevelUpdateReceiver {
     public void scoreUpdate(ScoreUpdate scoreUpdate) {
         cumulativeScore += scoreUpdate.getScore();
         setChanged();
-        notifyObservers();
+        notifyObservers(new ScoreUpdate(cumulativeScore));
     }
 
     @Override
@@ -100,14 +100,13 @@ public class Game extends Observable implements Observer, LevelUpdateReceiver {
             setChanged();
             notifyObservers();
         }
-
     }
 
     @Override
     public void metalBrickDestroyedUpdate(MetalBrickDestroyedUpdate metalBrickDestroyedUpdate) {
         ballsLeft++;
         setChanged();
-        notifyObservers();
+        notifyObservers(metalBrickDestroyedUpdate);
     }
 
     public void addPlayingLevel(Level level) {
