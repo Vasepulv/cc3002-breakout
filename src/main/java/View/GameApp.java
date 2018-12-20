@@ -8,12 +8,7 @@ import com.almasb.fxgl.physics.CollisionHandler;
 import com.almasb.fxgl.physics.HitBox;
 import com.almasb.fxgl.physics.PhysicsComponent;
 import com.almasb.fxgl.settings.GameSettings;
-import controller.Game;
 import facade.HomeworkTwoFacade;
-import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
 import javafx.scene.control.Label;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseButton;
@@ -21,6 +16,7 @@ import javafx.scene.layout.HBox;
 import logic.level.Level;
 import logic.update.*;
 
+import java.util.List;
 import java.util.Map;
 import java.util.Observable;
 import java.util.Observer;
@@ -34,6 +30,7 @@ import java.util.Observer;
 public class GameApp extends GameApplication implements Observer, LevelUpdateReceiver {
     private LevelView level1;
     private HomeworkTwoFacade controller;
+    private List<Level> levels;
     private Label score;
     private Label balls;
     private Label totalScore;
@@ -89,24 +86,16 @@ public class GameApp extends GameApplication implements Observer, LevelUpdateRec
         labelTotalScore=new Label("TotalScore");
         labelLevel=new Label("Level Name");
 
-
         score=new Label();
         balls=new Label();
         totalScore=new Label();
         actualLevel=new Label();
 
         HBox hBox=new HBox(20);
-        IntegerProperty integerProperty=new SimpleIntegerProperty(getGameState().getInt("Score"));
-        score.textProperty().bind(integerProperty.asString());
-
-        IntegerProperty integerProperty1=new SimpleIntegerProperty(getGameState().getInt("Balls"));
-        balls.textProperty().bind(integerProperty1.asString());
-
-        IntegerProperty integerProperty2=new SimpleIntegerProperty(getGameState().getInt("TotalScore"));
-        totalScore.textProperty().bind(integerProperty2.asString());
-
-        StringProperty stringProperty=new SimpleStringProperty(getGameState().getString("Level"));
-        actualLevel.textProperty().bind(stringProperty);
+        score.textProperty().bind(getGameState().intProperty("Score").asString());
+        balls.textProperty().bind(getGameState().intProperty("Balls").asString());
+        totalScore.textProperty().bind(getGameState().intProperty("TotalScore").asString());
+        actualLevel.textProperty().bind(getGameState().stringProperty("Level"));
 
        hBox.getChildren().addAll(labelScore,score,labelBalls,balls,labelTotalScore,totalScore,labelLevel,actualLevel);
         getGameScene().addUINode(hBox);
@@ -159,12 +148,14 @@ public class GameApp extends GameApplication implements Observer, LevelUpdateRec
     }
 
     private void nextLevel() {
-        Level level=controller.newLevelWithBricksFull("Level1",40,0.5,1,1);
-        controller.setCurrentLevel(level);
-        level1=new LevelView(level);
+        getGameWorld().getEntitiesByType(GameType.BRICK).forEach(Entity::removeFromWorld);
+        //Level level=controller.newLevelWithBricksNoMetal("Level 1",20,1,1);
+        Level level2=controller.newLevelWithBricksFull("Level 1",20,1,0.5,1);
+        //controller.setCurrentLevel(level);
+        controller.addPlayingLevel(level2);
+        level1=new LevelView(controller.getCurrentLevel());
         level1.init();
-        getGameState().setValue("Level",level.getName());
-
+        getGameState().setValue("Level",controller.getCurrentLevel().getName());
     }
 
 
@@ -197,11 +188,15 @@ public class GameApp extends GameApplication implements Observer, LevelUpdateRec
 
 
     private void addBall(){
-        if(controller.getBallsLeft()>0){
+        if(controller.getBallsLeft()>0 && !getGameWorld().getSingleton(GameType.BALL).isPresent()){
             Entity player=getGameWorld().getSingleton(GameType.PLAYER).get();
             Entity ball=GameFactory.newBall(player.getX()+40,player.getY()-20);
             getGameWorld().addEntity(ball);
             controller.dropBall();
+            getGameState().increment("Balls",-1);
+        }
+        else if(getGameWorld().getSingleton(GameType.BALL).isPresent()){
+
         }
         else{
             showGameOver();
@@ -245,7 +240,8 @@ public class GameApp extends GameApplication implements Observer, LevelUpdateRec
 
     @Override
     public void scoreUpdate(ScoreUpdate scoreUpdate) {
-        getGameState().setValue("Score",scoreUpdate);
+        getGameState().setValue("Score",scoreUpdate.getScore());
+        getGameState().setValue("TotalScore",scoreUpdate.getScore());
     }
 
     @Override
@@ -255,6 +251,6 @@ public class GameApp extends GameApplication implements Observer, LevelUpdateRec
 
     @Override
     public void metalBrickDestroyedUpdate(MetalBrickDestroyedUpdate metalBrickDestroyedUpdate) {
-        getGameState().setValue("Balls",controller.getBallsLeft());
+        getGameState().increment("Balls",1);
     }
 }

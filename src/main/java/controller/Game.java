@@ -98,7 +98,7 @@ public class Game extends Observable implements Observer, LevelUpdateReceiver {
         if (!hasCurrentLevel()) {
             winner = true;
             setChanged();
-            notifyObservers();
+            notifyObservers(maxLevelScoreReachedUpdate);
         }
     }
 

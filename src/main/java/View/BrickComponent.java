@@ -21,9 +21,9 @@ public class BrickComponent extends Component {
 
     public void hit(){
         FXGL.getApp().getAudioPlayer().playSound("boom8.wav");
-        //brick.hit();
-        getEntity().removeFromWorld();
+        brick.hit();
+        if(brick.isDestroyed()){
+            getEntity().removeFromWorld();
+        }
     }
-
-
 }

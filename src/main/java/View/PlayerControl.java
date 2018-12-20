@@ -34,7 +34,7 @@ public class PlayerControl extends Component {
     }
 
     public void left(){
-        if(isBallMoving()){
+        if(isBallMoving()&&position.getX()>0){
         getEntity().setScaleX(-1);
         Point2D point2D=new Point2D(position.getX()-5,position.getY());
         physics.reposition(point2D);
@@ -42,7 +42,7 @@ public class PlayerControl extends Component {
     }
 
     public void right() {
-        if (isBallMoving()) {
+        if (isBallMoving() && position.getX()<=500) {
             getEntity().setScaleX(1);
             Point2D point2D=new Point2D(position.getX()+5,position.getY());
             physics.reposition(point2D);

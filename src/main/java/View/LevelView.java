@@ -9,6 +9,7 @@ import com.almasb.fxgl.physics.box2d.dynamics.BodyType;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import logic.brick.Brick;
 import logic.brick.GlassBrick;
 import logic.brick.MetalBrick;
 import logic.brick.WoodenBrick;
@@ -47,7 +48,6 @@ public class LevelView {
                 brick.setPosition(i*60+5,j*30+50);
                 if(level.getBricks().get(l).getClass().equals(GlassBrick.class)){
                     brick.setView(new Rectangle(50,20, Color.LIGHTBLUE));
-                    //How to bind with a real brick???
                 }
                 else if(level.getBricks().get(l).getClass().equals(WoodenBrick.class)){
                     brick.setView(new Rectangle(50,20, Color.BROWN));
@@ -55,13 +55,13 @@ public class LevelView {
                 else if(level.getBricks().get(l).getClass().equals(MetalBrick.class)){
                     brick.setView(new Rectangle(50,20, Color.GOLDENROD));
                 }
+                brick.getComponent(BrickComponent.class).setBrick(level.getBricks().get(l));
                 bricks.add(brick);
                 l++;
                 FXGL.getApp().getGameWorld().addEntity(brick);
                 }
             }
         }
-
     }
 
 
