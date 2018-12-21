@@ -74,7 +74,7 @@ public class GameFactory implements EntityFactory{
         return Entities.builder()
                 .type(GameType.BRICK)
                 .with(new CollidableComponent(true))
-                .bbox(new HitBox(BoundingShape.box(90,40)))
+                .bbox(new HitBox(BoundingShape.box(50,20)))
                 .with(physics)
                 .with(new BrickComponent())
                 .build();

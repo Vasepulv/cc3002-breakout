@@ -6,6 +6,8 @@ import com.almasb.fxgl.entity.SpawnData;
 import com.almasb.fxgl.entity.components.CollidableComponent;
 import com.almasb.fxgl.physics.PhysicsComponent;
 import com.almasb.fxgl.physics.box2d.dynamics.BodyType;
+import javafx.event.EventHandler;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -15,7 +17,6 @@ import logic.brick.MetalBrick;
 import logic.brick.WoodenBrick;
 import logic.level.Level;
 
-import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -53,15 +54,27 @@ public class LevelView {
                     brick.setView(new Rectangle(50,20, Color.BROWN));
                 }
                 else if(level.getBricks().get(l).getClass().equals(MetalBrick.class)){
-                    brick.setView(new Rectangle(50,20, Color.GOLDENROD));
+                    brick.setView(new Rectangle(50,20, Color.GRAY));
                 }
                 brick.getComponent(BrickComponent.class).setBrick(level.getBricks().get(l));
                 bricks.add(brick);
                 l++;
+                Entity finalBrick = brick;
+                brick.getView().setOnMouseClicked(new EventHandler<MouseEvent>() {
+                    @Override
+                    public void handle(MouseEvent event) {
+                        finalBrick.getComponent(BrickComponent.class).hit();
+                    }
+                });
                 FXGL.getApp().getGameWorld().addEntity(brick);
                 }
             }
         }
-    }
+
+
+
+
+}
+
 
 

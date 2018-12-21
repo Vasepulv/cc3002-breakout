@@ -11,12 +11,10 @@ import com.almasb.fxgl.settings.GameSettings;
 import facade.HomeworkTwoFacade;
 import javafx.scene.control.Label;
 import javafx.scene.input.KeyCode;
-import javafx.scene.input.MouseButton;
 import javafx.scene.layout.HBox;
 import logic.level.Level;
 import logic.update.*;
 
-import java.util.List;
 import java.util.Map;
 import java.util.Observable;
 import java.util.Observer;
@@ -28,18 +26,9 @@ import java.util.Observer;
  * @version 1.0
  */
 public class GameApp extends GameApplication implements Observer, LevelUpdateReceiver {
-    private LevelView level1;
+    private LevelView levelView;
     private HomeworkTwoFacade controller;
-    private List<Level> levels;
-    private Label score;
-    private Label balls;
-    private Label totalScore;
-    private Label actualLevel;
-    private Label labelLevel;
-    private Label labelScore;
-    private Label labelBalls;
-    private Label labelTotalScore;
-
+    private boolean firstLevel;
 
     @Override
     protected void initSettings(GameSettings gameSettings) {
@@ -73,23 +62,24 @@ public class GameApp extends GameApplication implements Observer, LevelUpdateRec
     }
 
     private void initLevel() {
+        firstLevel=true;
         controller=new HomeworkTwoFacade();
         Level level=controller.getCurrentLevel();
-        level1=new LevelView(level);
-        level1.init();
+        levelView =new LevelView(level);
+        levelView.init();
     }
 
     @Override
     protected void initUI() {
-        labelBalls=new Label("Balls");
-        labelScore=new Label("Score");
-        labelTotalScore=new Label("TotalScore");
-        labelLevel=new Label("Level Name");
+        Label labelBalls = new Label("Balls");
+        Label labelScore = new Label("Score");
+        Label labelTotalScore = new Label("TotalScore");
+        Label labelLevel = new Label("Level Name");
 
-        score=new Label();
-        balls=new Label();
-        totalScore=new Label();
-        actualLevel=new Label();
+        Label score = new Label();
+        Label balls = new Label();
+        Label totalScore = new Label();
+        Label actualLevel = new Label();
 
         HBox hBox=new HBox(20);
         score.textProperty().bind(getGameState().intProperty("Score").asString());
@@ -97,7 +87,7 @@ public class GameApp extends GameApplication implements Observer, LevelUpdateRec
         totalScore.textProperty().bind(getGameState().intProperty("TotalScore").asString());
         actualLevel.textProperty().bind(getGameState().stringProperty("Level"));
 
-       hBox.getChildren().addAll(labelScore,score,labelBalls,balls,labelTotalScore,totalScore,labelLevel,actualLevel);
+       hBox.getChildren().addAll(labelScore, score, labelBalls, balls, labelTotalScore, totalScore, labelLevel, actualLevel);
         getGameScene().addUINode(hBox);
     }
 
@@ -138,24 +128,21 @@ public class GameApp extends GameApplication implements Observer, LevelUpdateRec
                 addBall();
             }
         },KeyCode.M);
-
-        input.addAction(new UserAction("Testing") {
-            @Override
-            protected void onActionBegin() {
-
-            }
-        },MouseButton.PRIMARY);
     }
 
     private void nextLevel() {
-        getGameWorld().getEntitiesByType(GameType.BRICK).forEach(Entity::removeFromWorld);
-        //Level level=controller.newLevelWithBricksNoMetal("Level 1",20,1,1);
-        Level level2=controller.newLevelWithBricksFull("Level 1",20,1,0.5,1);
-        //controller.setCurrentLevel(level);
-        controller.addPlayingLevel(level2);
-        level1=new LevelView(controller.getCurrentLevel());
-        level1.init();
-        getGameState().setValue("Level",controller.getCurrentLevel().getName());
+        if (!firstLevel){
+            getGameWorld().getEntitiesByType(GameType.BRICK).forEach(Entity::removeFromWorld);
+            Level level2=controller.newLevelWithBricksFull("Level 2",20,1,0.5,1);
+            controller.addPlayingLevel(level2);}
+        else {
+            Level level1=controller.newLevelWithBricksFull("Level 1",20,0.5,1,1);
+            controller.setCurrentLevel(level1);
+            levelView = new LevelView(controller.getCurrentLevel());
+            levelView.init();
+            getGameState().setValue("Level", controller.getCurrentLevel().getName());
+            firstLevel = false;
+        }
     }
 
 
