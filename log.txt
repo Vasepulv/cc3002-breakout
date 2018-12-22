@@ -1,0 +1,24 @@
+commit d05a1bb2cf864f8be3a0b5c326a4db4f40ecd505 (HEAD -> master, origin/master)
+Author: vasepulv <v.sepulveda.2@ug.uchile.cl>
+Date:   Sat Dec 22 17:25:48 2018 -0300
+
+    Agregando Updates, ultimos features agregados
+
+commit d63c93c3b1b71593c7277041e89b6ad5c618afb5
+Author: vasepulv <v.sepulveda.2@ug.uchile.cl>
+Date:   Sat Dec 22 13:31:09 2018 -0300
+
+    Agregando test
+
+commit 16b4e9d43a1365765ca8fa30e2c8390ab7e770ae
+Author: vasepulv <v.sepulveda.2@ug.uchile.cl>
+Date:   Fri Dec 21 12:15:40 2018 -0300
+
+    Agregando features
+
+commit c62e71cd8ba8879ac65348958d20a6c327c72861
+Author: vasepulv <v.sepulveda.2@ug.uchile.cl>
+Date:   Wed Dec 19 23:48:01 2018 -0300
+
+    Terminando visualidad basica
+:
