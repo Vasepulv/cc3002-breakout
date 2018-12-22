@@ -32,7 +32,7 @@ The minor features added, are mostly adding sound and effects when hitting a Bri
 can be heard, and also some particles seen. The sound effects depends on the type of Brick.
 
 To allow the View receive updates from the Game, a new type of Update has been introduced, this works mainly as a adaptor to previous
-UpdateClasses.
+UpdateClasses. To start the game, you click on the method main in the GameApp class.
 
 All the elements in the controller and the logic carpets has been tested. The ViewUpdates has not, as they are part of the GUI, and cannot
 be tested without it.
