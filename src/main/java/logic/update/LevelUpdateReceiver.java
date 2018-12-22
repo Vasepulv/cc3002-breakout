@@ -8,4 +8,5 @@ public interface LevelUpdateReceiver {
     void scoreUpdate(ScoreUpdate scoreUpdate);
     void maxLevelScoreUpdate(MaxLevelScoreReachedUpdate maxLevelScoreReachedUpdate);
     void metalBrickDestroyedUpdate(MetalBrickDestroyedUpdate metalBrickDestroyedUpdate);
+    void goldenBrickDestroyedUpdate(GoldenBrickDestroyedUpdate goldenBrickDestroyedUpdate);
 }

@@ -1,0 +1,235 @@
+10:37:17.330 [JavaFX Application Thread] DEBUG GameApplication      - Logger initialized
+10:37:17.348 [JavaFX Application Thread] DEBUG GameApplication      - Logging settings
+Title: BreakOut
+Version: 0.1
+Width: 600
+Height: 600
+Fullscreen: false
+Intro: false
+Menus: false
+Profiling: false
+Single step:false
+App Mode: DEVELOPER
+Menu Key: ESCAPE
+Stage Style: DECORATED
+Scene Factory: class com.almasb.fxgl.scene.SceneFactory
+Dialog Factory: class com.almasb.fxgl.ui.FXGLDialogFactory
+UI Factory: class com.almasb.fxgl.ui.FXGLUIFactory
+Notification Service: class com.almasb.fxgl.gameplay.notification.XboxNotificationView
+Exception Handler: class com.almasb.fxgl.app.FXGLExceptionHandler
+10:37:17.348 [JavaFX Application Thread] DEBUG GameApplication      - Starting FXGL
+10:37:17.358 [JavaFX Application Thread] INFO  FXGL                 - FXGL-0.5.4 on DESKTOP
+10:37:17.359 [JavaFX Application Thread] INFO  FXGL                 - Source code and latest versions at: https://github.com/AlmasB/FXGL
+10:37:17.359 [JavaFX Application Thread] INFO  FXGL                 -              Join the FXGL chat at: https://gitter.im/AlmasB/FXGL
+10:37:17.360 [JavaFX Application Thread] DEBUG FXGL                 - FXGL started
+10:37:17.360 [JavaFX Application Thread] DEBUG FXGL                 - Initializing FXGL
+10:37:17.427 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/ui/cursors/fxgl_default.png
+10:37:17.496 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/ui/fonts/VarelaRound-Regular.ttf
+10:37:17.732 [JavaFX Application Thread] DEBUG MainWindow           - Creating a JavaFX scene
+10:37:17.818 [JavaFX Application Thread] DEBUG MainWindow           - Target settings size: 600.0 x 600.0
+10:37:17.819 [JavaFX Application Thread] DEBUG MainWindow           - Scaled scene size:    600.0 x 600.0
+10:37:17.819 [JavaFX Application Thread] DEBUG MainWindow           - Scaled ratio: (1.0, 1.0)
+10:37:17.831 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/ui/css/fxgl_dark.css
+10:37:17.838 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/fxgl_icon.png
+10:37:17.900 [JavaFX Application Thread] DEBUG MainWindow           - Opening main window
+10:37:18.301 [JavaFX Application Thread] DEBUG MainWindow           - Window border size: (6.0, 29.0)
+10:37:18.302 [JavaFX Application Thread] DEBUG MainWindow           - Scaled size: 600.0 x 600.0
+10:37:18.302 [JavaFX Application Thread] DEBUG MainWindow           - Scaled ratio: (1.0, 1.0)
+10:37:18.302 [JavaFX Application Thread] DEBUG MainWindow           - Scene size: 600.0 x 600.0
+10:37:18.302 [JavaFX Application Thread] DEBUG MainWindow           - Stage size: 606.0 x 629.0
+10:37:18.454 [ForkJoinPool.commonPool-worker-1] DEBUG FS                   - Loaded DesktopFSService
+10:37:18.455 [ForkJoinPool.commonPool-worker-1] DEBUG FXGL                 - Loading FXGL system data
+10:37:18.465 [ForkJoinPool.commonPool-worker-1] DEBUG DesktopFSService     - Reading from: system\fxgl.bundle
+10:37:18.482 [ForkJoinPool.commonPool-worker-1] DEBUG Bundle               - Logging bundle: FXGL
+10:37:18.483 [ForkJoinPool.commonPool-worker-1] DEBUG Bundle               - FXGL.offline.timer.version.check=2018-12-21T23:35:16.236
+10:37:18.485 [ForkJoinPool.commonPool-worker-1] DEBUG FXGL                 - Initializing state machine and application states
+10:37:18.488 [ForkJoinPool.commonPool-worker-1] DEBUG AssetLoader          - Loading from disk: /assets/ui/cursors/fxgl_default.png
+10:37:18.497 [ForkJoinPool.commonPool-worker-1] DEBUG AssetLoader          - Loading from disk: /assets/ui/cursors/fxgl_default.png
+10:37:18.507 [ForkJoinPool.commonPool-worker-1] DEBUG AssetLoader          - Loading from cache: /assets/ui/fonts/VarelaRound-Regular.ttf
+10:37:18.514 [ForkJoinPool.commonPool-worker-1] DEBUG AssetLoader          - Loading from disk: /assets/ui/cursors/fxgl_default.png
+10:37:18.519 [ForkJoinPool.commonPool-worker-1] DEBUG GameScene            - Game scene initialized: 600x600
+10:37:18.530 [ForkJoinPool.commonPool-worker-1] DEBUG GameWorld            - Game world initialized
+10:37:18.647 [ForkJoinPool.commonPool-worker-1] DEBUG PhysicsWorld         - Physics world initialized: appHeight=600, physics.ppm=50,0
+10:37:18.683 [ForkJoinPool.commonPool-worker-1] DEBUG Input                - Registered new binding: Pause - Esc
+10:37:18.755 [JavaFX Application Thread] DEBUG FXGL                 - Running preInit()
+10:37:18.757 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Screenshot - P
+10:37:18.759 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Dev Options - CTRL+0
+10:37:18.760 [JavaFX Application Thread] DEBUG Input                - Registered new binding: System info dump - CTRL+9
+10:37:18.761 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Restart - CTRL+R
+10:37:18.762 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Move Right - D
+10:37:18.762 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Move Left - A
+10:37:18.762 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Move Ball - Space
+10:37:18.762 [JavaFX Application Thread] DEBUG Input                - Registered new binding: New Level - N
+10:37:18.763 [JavaFX Application Thread] DEBUG Input                - Registered new binding: New Ball - M
+10:37:18.764 [JavaFX Application Thread] INFO  FXGL                 - FXGL initialization took: 1,404 sec
+10:37:18.764 [JavaFX Application Thread] DEBUG LoopRunner           - Starting loop
+10:37:18.766 [JavaFX Application Thread] DEBUG StartupState         - STARTUP
+10:37:18.767 [JavaFX Application Thread] DEBUG GameApplication      - Starting new game
+10:37:18.767 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+10:37:18.769 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/ui/css/fxgl_dark.css
+10:37:18.780 [JavaFX Application Thread] DEBUG AppStateMachine      - StartupState -> LoadingState
+10:37:18.795 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Clearing previous game
+10:37:18.795 [FXGL Background Thread 1 ] DEBUG GameWorld            - Clearing game world
+10:37:18.795 [FXGL Background Thread 1 ] DEBUG PhysicsWorld         - Clearing physics world
+10:37:18.796 [FXGL Background Thread 1 ] DEBUG GameScene            - Clearing game scene
+10:37:18.797 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing Game
+10:37:19.016 [FXGL Background Thread 1 ] DEBUG GameScene            - Creating render group for layer: DEFAULT(100000)
+10:37:19.020 [FXGL Background Thread 1 ] DEBUG GameScene            - Creating render group for layer: BACKGROUND(1000)
+10:37:19.025 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing Physics
+10:37:19.026 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing UI
+10:37:19.034 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initialization Complete
+10:37:19.035 [FXGL Background Thread 1 ] INFO  InitAppTask          - Game initialization took: 0,240 sec
+10:37:19.040 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+10:37:19.041 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/ui/css/fxgl_dark.css
+10:37:19.061 [JavaFX Application Thread] DEBUG AppStateMachine      - LoadingState -> PlayState
+10:37:25.734 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:26.214 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:26.679 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:27.377 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:27.378 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:37:27.885 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:28.102 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:28.102 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:37:29.971 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:30.142 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:30.323 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:30.323 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:37:30.975 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:31.139 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:31.298 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:31.299 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:37:31.882 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:32.055 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:32.235 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:32.236 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:37:34.439 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:34.632 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:35.406 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:35.584 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:35.766 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:35.766 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:37:36.627 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:36.628 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:37:37.895 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:38.060 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:38.217 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:38.217 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:37:38.833 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:39.019 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:39.177 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:39.178 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:37:39.859 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:40.031 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:40.196 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:40.197 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:37:40.788 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:40.954 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:41.134 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:41.135 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:37:41.921 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:42.094 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:42.274 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:42.275 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:37:42.926 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:43.136 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:43.324 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:43.325 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:37:44.223 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:37:44.988 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:37:45.775 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:37:46.384 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:37:47.530 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:37:48.836 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:37:49.689 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:37:50.439 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:50.627 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:50.628 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:37:54.475 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:37:55.455 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:56.139 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:56.318 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:56.484 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:56.484 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:37:57.442 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:57.652 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:57.653 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:37:58.454 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:58.679 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:58.860 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:58.860 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:37:59.692 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:37:59.872 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:38:00.059 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:38:00.060 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:38:00.936 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:38:01.116 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:38:01.312 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:38:01.312 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:38:02.225 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:38:02.413 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:38:02.586 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:38:02.586 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:38:03.582 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:38:03.800 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:38:03.987 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:38:03.989 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:38:04.887 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:38:05.075 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:38:05.274 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/ui/fonts/VarelaRound-Regular.ttf
+10:38:05.281 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/ui/fonts/VarelaRound-Regular.ttf
+10:38:05.286 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/properties/languages/english.properties
+10:38:05.293 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/ui/fonts/VarelaRound-Regular.ttf
+10:38:05.293 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/properties/languages/english.properties
+10:38:05.302 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/ui/fonts/VarelaRound-Regular.ttf
+10:38:05.305 [JavaFX Application Thread] DEBUG AppStateMachine      - Push state: DialogSubState
+10:38:05.305 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+10:38:05.305 [JavaFX Application Thread] DEBUG AppStateMachine      - PlayState -> DialogSubState
+10:38:05.322 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:38:05.322 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:38:06.725 [JavaFX Application Thread] DEBUG AppStateMachine      - Pop state: DialogSubState
+10:38:06.726 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+10:38:06.727 [JavaFX Application Thread] DEBUG AppStateMachine      - PlayState <- DialogSubState
+10:38:06.746 [JavaFX Application Thread] DEBUG GameApplication      - Starting new game
+10:38:06.746 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+10:38:06.780 [JavaFX Application Thread] DEBUG AppStateMachine      - PlayState -> LoadingState
+10:38:06.786 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Clearing previous game
+10:38:06.787 [FXGL Background Thread 1 ] DEBUG GameWorld            - Clearing game world
+10:38:06.797 [FXGL Background Thread 1 ] DEBUG PhysicsWorld         - Clearing physics world
+10:38:06.797 [FXGL Background Thread 1 ] DEBUG GameScene            - Clearing game scene
+10:38:06.798 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing Game
+10:38:06.806 [FXGL Background Thread 1 ] DEBUG GameScene            - Creating render group for layer: DEFAULT(100000)
+10:38:06.809 [FXGL Background Thread 1 ] DEBUG GameScene            - Creating render group for layer: BACKGROUND(1000)
+10:38:06.813 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing Physics
+10:38:06.813 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing UI
+10:38:06.815 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initialization Complete
+10:38:06.816 [FXGL Background Thread 1 ] INFO  InitAppTask          - Game initialization took: 0,030 sec
+10:38:06.824 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+10:38:06.853 [JavaFX Application Thread] DEBUG AppStateMachine      - LoadingState -> PlayState
+10:38:09.447 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:38:10.108 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:38:10.804 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:38:11.629 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:38:12.311 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:38:13.024 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:38:13.466 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:38:13.923 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:38:14.464 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:38:15.147 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:38:15.768 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:38:16.397 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:38:17.064 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:38:17.656 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:38:18.210 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:38:18.648 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:38:19.261 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:38:19.966 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:38:20.738 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:38:22.567 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:38:22.730 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:38:22.898 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/pumpkin_break_01.wav
+10:38:22.899 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/boom8.wav
+10:38:23.962 [JavaFX Application Thread] DEBUG FXGL                 - Exiting FXGL
+10:38:23.963 [JavaFX Application Thread] DEBUG FXGL                 - Shutting down background threads
+10:38:23.964 [JavaFX Application Thread] DEBUG FXGL                 - Saving FXGL system data
+10:38:23.970 [JavaFX Application Thread] DEBUG DesktopFSService     - Writing to: system\fxgl.bundle
+10:38:23.976 [JavaFX Application Thread] DEBUG FXGL                 - Closing logger and exiting JavaFX

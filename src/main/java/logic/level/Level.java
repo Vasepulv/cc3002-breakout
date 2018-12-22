@@ -77,4 +77,6 @@ public interface Level extends Observer, BrickUpdateReceiver {
     void setNextLevel(Level level);
 
     void assignGame(Game game);
+
+    void setGoldenBricks(int n, double prob, int seed);
 }

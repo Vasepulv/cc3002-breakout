@@ -2,7 +2,6 @@ package View;
 
 import com.almasb.fxgl.entity.*;
 import com.almasb.fxgl.entity.components.CollidableComponent;
-import com.almasb.fxgl.particle.Particle;
 import com.almasb.fxgl.particle.ParticleComponent;
 import com.almasb.fxgl.particle.ParticleEmitter;
 import com.almasb.fxgl.physics.BoundingShape;
@@ -25,7 +24,7 @@ public class GameFactory implements EntityFactory{
     @Spawns("Player")
     public static Entity newPlayer(double x, double y){
         PhysicsComponent physics=new PhysicsComponent();
-        physics.setBodyType(BodyType.DYNAMIC);
+        physics.setBodyType(BodyType.KINEMATIC);
         return Entities.builder()
                 .type(GameType.PLAYER)
                 .at(x,y)
@@ -48,7 +47,7 @@ public class GameFactory implements EntityFactory{
     public static Entity newBall(double x, double y){
         PhysicsComponent physics=new PhysicsComponent();
         physics.setBodyType(BodyType.DYNAMIC);
-        physics.setFixtureDef(new FixtureDef().restitution(1f).density(0.1f));
+        physics.setFixtureDef(new FixtureDef().restitution(1f).density(1f).friction(1f));
         return Entities.builder()
                 .type(GameType.BALL)
                 .at(x,y)
@@ -84,6 +83,7 @@ public class GameFactory implements EntityFactory{
         ParticleEmitter emitter=new ParticleEmitter();
         emitter.setStartColor(Color.web("ffffe0"));
         emitter.setSize(3,5);
+        emitter.setNumParticles(8);
 
         ParticleComponent particleComponent=new ParticleComponent(emitter);
         particleComponent.setOnFinished(()->particleComponent.getEntity().removeFromWorld());

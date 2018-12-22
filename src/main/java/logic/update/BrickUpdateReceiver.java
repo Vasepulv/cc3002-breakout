@@ -7,4 +7,5 @@ package logic.update;
 public interface BrickUpdateReceiver {
     void brickDestroyedUpdate(BrickDestroyedUpdate brickDestroyedUpdate);
     void metalBrickDestroyedUpdate(MetalBrickDestroyedUpdate metalBrickDestroyedUpdate);
+    void goldenBrickDestroyedUpdate(GoldenBrickDestroyedUpdate goldenBrickDestroyedUpdate);
 }

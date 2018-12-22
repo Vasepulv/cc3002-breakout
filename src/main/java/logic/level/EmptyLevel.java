@@ -3,6 +3,7 @@ package logic.level;
 import controller.Game;
 import logic.brick.Brick;
 import logic.update.BrickDestroyedUpdate;
+import logic.update.GoldenBrickDestroyedUpdate;
 import logic.update.MetalBrickDestroyedUpdate;
 
 import java.util.ArrayList;
@@ -66,6 +67,12 @@ public class EmptyLevel implements Level {
     }
 
     @Override
+    public void setGoldenBricks(int n, double prob, int seed) {
+
+    }
+
+
+    @Override
     public void update(Observable o, Object arg) {
 
     }
@@ -77,6 +84,11 @@ public class EmptyLevel implements Level {
 
     @Override
     public void metalBrickDestroyedUpdate(MetalBrickDestroyedUpdate metalBrickDestroyedUpdate) {
+
+    }
+
+    @Override
+    public void goldenBrickDestroyedUpdate(GoldenBrickDestroyedUpdate goldenBrickDestroyedUpdate) {
 
     }
 }

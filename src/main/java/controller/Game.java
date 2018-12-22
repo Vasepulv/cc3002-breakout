@@ -42,6 +42,7 @@ public class Game extends Observable implements Observer, LevelUpdateReceiver {
 
     public void goNextLevel() {
         setLevel(currentLevel.getNextLevel());
+        setChanged();
     }
 
     public boolean hasCurrentLevel() {
@@ -55,7 +56,6 @@ public class Game extends Observable implements Observer, LevelUpdateReceiver {
     public void setLevel(Level level) {
         currentLevel = level;
         level.assignGame(this);
-        notifyObservers();
     }
 
     public int getPoints() {
@@ -88,26 +88,39 @@ public class Game extends Observable implements Observer, LevelUpdateReceiver {
     @Override
     public void scoreUpdate(ScoreUpdate scoreUpdate) {
         cumulativeScore += scoreUpdate.getScore();
-        setChanged();
-        notifyObservers(new ScoreUpdate(cumulativeScore));
+        //setChanged();
+        //notifyObservers(new ScoreUpdate(cumulativeScore));
     }
 
     @Override
     public void maxLevelScoreUpdate(MaxLevelScoreReachedUpdate maxLevelScoreReachedUpdate) {
         goNextLevel();
+        //setChanged();
+        //notifyObservers(maxLevelScoreReachedUpdate);
         if (!hasCurrentLevel()) {
             winner = true;
-            setChanged();
-            notifyObservers(maxLevelScoreReachedUpdate);
+            //setChanged();
+            //notifyObservers(maxLevelScoreReachedUpdate);
         }
     }
 
     @Override
     public void metalBrickDestroyedUpdate(MetalBrickDestroyedUpdate metalBrickDestroyedUpdate) {
         ballsLeft++;
-        setChanged();
-        notifyObservers(metalBrickDestroyedUpdate);
+        //setChanged();
+        //notifyObservers(new MetalBrickDestroyedUpdate());
     }
+
+    /**
+     * Sends a notification to the GameView that a Golden Bricks has been destroyed.
+     * @param goldenBrickDestroyedUpdate the notification
+     */
+    @Override
+    public void goldenBrickDestroyedUpdate(GoldenBrickDestroyedUpdate goldenBrickDestroyedUpdate) {
+        //setChanged();
+        //notifyObservers(new GoldenBrickDestroyedUpdate());
+    }
+
 
     public void addPlayingLevel(Level level) {
         currentLevel.addPlayingLevel(level);

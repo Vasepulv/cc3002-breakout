@@ -9,15 +9,21 @@ import com.almasb.fxgl.physics.HitBox;
 import com.almasb.fxgl.physics.PhysicsComponent;
 import com.almasb.fxgl.settings.GameSettings;
 import facade.HomeworkTwoFacade;
+import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.HBox;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
+import javafx.scene.shape.Rectangle;
 import logic.level.Level;
 import logic.update.*;
 
 import java.util.Map;
 import java.util.Observable;
 import java.util.Observer;
+import java.util.Random;
+import java.util.function.Predicate;
 
 /**
  * This class represents the GUI of the game.
@@ -29,6 +35,7 @@ public class GameApp extends GameApplication implements Observer, LevelUpdateRec
     private LevelView levelView;
     private HomeworkTwoFacade controller;
     private boolean firstLevel;
+    private Level level;
 
     @Override
     protected void initSettings(GameSettings gameSettings) {
@@ -89,6 +96,14 @@ public class GameApp extends GameApplication implements Observer, LevelUpdateRec
 
        hBox.getChildren().addAll(labelScore, score, labelBalls, balls, labelTotalScore, totalScore, labelLevel, actualLevel);
         getGameScene().addUINode(hBox);
+
+        int i=controller.getBallsLeft();
+        for(int j=0;j<i;j++){
+            Circle circle=new Circle(10,Color.LAVENDER);
+            circle.setCenterY(20);
+            circle.setCenterX(420+40*j);
+            getGameScene().addUINode(circle);
+        }
     }
 
     @Override
@@ -131,18 +146,28 @@ public class GameApp extends GameApplication implements Observer, LevelUpdateRec
     }
 
     private void nextLevel() {
+        Random r2=new Random();
         if (!firstLevel){
-            getGameWorld().getEntitiesByType(GameType.BRICK).forEach(Entity::removeFromWorld);
-            Level level2=controller.newLevelWithBricksFull("Level 2",20,1,0.5,1);
-            controller.addPlayingLevel(level2);}
+            Level level2=controller.newLevelWithBricksFull("Level 2",30,r2.nextDouble(),0.5,1);
+            controller.addPlayingLevel(level2);
+        }
         else {
-            Level level1=controller.newLevelWithBricksFull("Level 1",20,0.5,1,1);
+            Level level1=controller.newLevelWithBricksFull("Level 1",30,r2.nextDouble(),1,1);
             controller.setCurrentLevel(level1);
+            controller.setGoldenBricks(2,r2.nextDouble(),1);
+            level=controller.getCurrentLevel();
             levelView = new LevelView(controller.getCurrentLevel());
             levelView.init();
             getGameState().setValue("Level", controller.getCurrentLevel().getName());
-            firstLevel = false;
+            firstLevel=false;
         }
+    }
+
+    public void setLevelView(Level level){
+        getGameWorld().getEntitiesByType(GameType.BRICK).forEach(Entity::removeFromWorld);
+        getGameState().setValue("Score",0);
+        levelView=new LevelView(level);
+        levelView.init();
     }
 
 
@@ -177,6 +202,7 @@ public class GameApp extends GameApplication implements Observer, LevelUpdateRec
     private void addBall(){
         if(controller.getBallsLeft()>0 && !getGameWorld().getSingleton(GameType.BALL).isPresent()){
             Entity player=getGameWorld().getSingleton(GameType.PLAYER).get();
+            player.setViewWithBBox(new Rectangle(100,30,Color.BLUEVIOLET));
             Entity ball=GameFactory.newBall(player.getX()+40,player.getY()-20);
             getGameWorld().addEntity(ball);
             controller.dropBall();
@@ -233,11 +259,16 @@ public class GameApp extends GameApplication implements Observer, LevelUpdateRec
 
     @Override
     public void maxLevelScoreUpdate(MaxLevelScoreReachedUpdate maxLevelScoreReachedUpdate) {
-       showWinner();
+     showWinner();
     }
 
     @Override
     public void metalBrickDestroyedUpdate(MetalBrickDestroyedUpdate metalBrickDestroyedUpdate) {
         getGameState().increment("Balls",1);
+    }
+
+    @Override
+    public void goldenBrickDestroyedUpdate(GoldenBrickDestroyedUpdate goldenBrickDestroyedUpdate) {
+        getGameWorld().getSingleton(GameType.PLAYER).get().getComponent(PlayerControl.class).change();
     }
 }

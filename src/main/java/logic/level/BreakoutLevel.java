@@ -2,11 +2,13 @@ package logic.level;
 
 import controller.Game;
 import logic.brick.Brick;
+import logic.brick.GoldenBrick;
 import logic.update.*;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Observable;
+import java.util.Random;
 
 /**
  *
@@ -79,6 +81,17 @@ public class BreakoutLevel extends Observable implements Level {
         addObserver(game);
     }
 
+    @Override
+    public void setGoldenBricks(int n, double prob, int seed) {
+        Random r=new Random(seed);
+        for(int i=0;i<n;i++){
+            double res=r.nextDouble();
+            if(res<=prob){
+                addBrick(new GoldenBrick());
+            }
+        }
+    }
+
     void setName(String name) {
         this.name = name;
     }
@@ -113,7 +126,15 @@ public class BreakoutLevel extends Observable implements Level {
 
     @Override
     public void metalBrickDestroyedUpdate(MetalBrickDestroyedUpdate metalBrickDestroyedUpdate) {
+        currentNumberOfBricks--;
         setChanged();
         notifyObservers(new MetalBrickDestroyedUpdate());
+    }
+
+    @Override
+    public void goldenBrickDestroyedUpdate(GoldenBrickDestroyedUpdate goldenBrickDestroyedUpdate) {
+        currentNumberOfBricks--;
+        setChanged();
+        notifyObservers(new GoldenBrickDestroyedUpdate());
     }
 }

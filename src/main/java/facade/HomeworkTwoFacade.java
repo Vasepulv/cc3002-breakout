@@ -195,4 +195,14 @@ public class HomeworkTwoFacade{
         return game.winner();
     }
 
+    /**
+     * Adds to the existing level, GoldenBricks.
+     *
+     * @param n the number of possible golden Bricks
+     * @param prob that a GoldenBricks appears
+     * @param seed the seed used to calculate the probability
+     */
+    public void setGoldenBricks(int n,double prob, int seed){
+        game.getCurrentLevel().setGoldenBricks(n,prob,seed);
+    }
 }
