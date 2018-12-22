@@ -1,5 +1,7 @@
 package View;
 
+import com.almasb.fxgl.app.FXGL;
+import com.almasb.fxgl.core.math.FXGLMath;
 import com.almasb.fxgl.entity.*;
 import com.almasb.fxgl.entity.components.CollidableComponent;
 import com.almasb.fxgl.particle.ParticleComponent;
@@ -9,9 +11,12 @@ import com.almasb.fxgl.physics.HitBox;
 import com.almasb.fxgl.physics.PhysicsComponent;
 import com.almasb.fxgl.physics.box2d.dynamics.BodyType;
 import com.almasb.fxgl.physics.box2d.dynamics.FixtureDef;
+import javafx.geometry.Point2D;
+import javafx.scene.effect.BlendMode;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
+import javafx.util.Duration;
 
 /**
  * This class represents the factory of the elements in the game, like Bricks, Player (the bar), the Walls and the Bricks.
@@ -83,13 +88,17 @@ public class GameFactory implements EntityFactory{
         ParticleEmitter emitter=new ParticleEmitter();
         emitter.setStartColor(Color.web("ffffe0"));
         emitter.setSize(3,5);
-        emitter.setNumParticles(8);
-
+        emitter.setEmissionRate(0.25);
+        emitter.setNumParticles(5);
+        emitter.setVelocityFunction(i -> new Point2D(FXGLMath.random(2f,4)*10, FXGLMath.random(2f, 4f) * 20));
+        emitter.setExpireFunction(i-> Duration.seconds(1));
+        emitter.setBlendMode(BlendMode.ADD);
         ParticleComponent particleComponent=new ParticleComponent(emitter);
         particleComponent.setOnFinished(()->particleComponent.getEntity().removeFromWorld());
+
         return Entities.builder()
                 .with(particleComponent)
-                .build();
+                .buildAndAttach();
     }
 
 }

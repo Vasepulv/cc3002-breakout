@@ -2,6 +2,7 @@ package controller;
 
 
 import View.GameApp;
+import logic.ViewUpdates.*;
 import logic.brick.Brick;
 import logic.level.EmptyLevel;
 import logic.level.Level;
@@ -42,7 +43,6 @@ public class Game extends Observable implements Observer, LevelUpdateReceiver {
 
     public void goNextLevel() {
         setLevel(currentLevel.getNextLevel());
-        setChanged();
     }
 
     public boolean hasCurrentLevel() {
@@ -70,7 +70,7 @@ public class Game extends Observable implements Observer, LevelUpdateReceiver {
         if (ballsLeft > 0) {
             ballsLeft--;
             setChanged();
-            notifyObservers();
+            notifyObservers(new ChangeBallUpdate(-1));
         }
     }
 
@@ -88,27 +88,28 @@ public class Game extends Observable implements Observer, LevelUpdateReceiver {
     @Override
     public void scoreUpdate(ScoreUpdate scoreUpdate) {
         cumulativeScore += scoreUpdate.getScore();
-        //setChanged();
-        //notifyObservers(new ScoreUpdate(cumulativeScore));
+        setChanged();
+        notifyObservers(new ScoreChangeUpdate(scoreUpdate));
     }
 
     @Override
     public void maxLevelScoreUpdate(MaxLevelScoreReachedUpdate maxLevelScoreReachedUpdate) {
         goNextLevel();
-        //setChanged();
-        //notifyObservers(maxLevelScoreReachedUpdate);
         if (!hasCurrentLevel()) {
             winner = true;
-            //setChanged();
-            //notifyObservers(maxLevelScoreReachedUpdate);
+            setChanged();
+            notifyObservers(new WinnerUpdate());
+            return;
         }
+        setChanged();
+        notifyObservers(new MaxScoreAdapter(maxLevelScoreReachedUpdate));
     }
 
     @Override
     public void metalBrickDestroyedUpdate(MetalBrickDestroyedUpdate metalBrickDestroyedUpdate) {
         ballsLeft++;
-        //setChanged();
-        //notifyObservers(new MetalBrickDestroyedUpdate());
+        setChanged();
+        notifyObservers(new ChangeBallUpdate(1));
     }
 
     /**
@@ -117,8 +118,8 @@ public class Game extends Observable implements Observer, LevelUpdateReceiver {
      */
     @Override
     public void goldenBrickDestroyedUpdate(GoldenBrickDestroyedUpdate goldenBrickDestroyedUpdate) {
-        //setChanged();
-        //notifyObservers(new GoldenBrickDestroyedUpdate());
+        setChanged();
+        notifyObservers(new GoldBrickAdapter());
     }
 
 

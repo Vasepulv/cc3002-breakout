@@ -2,32 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b6e70084-c118-4667-af91-1dfa2d850951" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/logic/update/GoldenBrickDestroyedUpdate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/logic/ViewUpdates/ChangeBallUpdate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-21-dic-2018-11.12.07.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-21-dic-2018-11.12.55.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-21-dic-2018-11.13.34.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-21-dic-2018-11.42.24.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-21-dic-2018-11.43.45.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-21-dic-2018-11.45.12.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-21-dic-2018-11.45.49.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-21-dic-2018-11.46.15.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-21-dic-2018-11.47.36.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-21-dic-2018-11.48.01.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/View/BallComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/BallComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-22-dic-2018-10.18.39.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-22-dic-2018-10.20.31.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-22-dic-2018-10.21.45.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-22-dic-2018-10.22.50.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-22-dic-2018-10.23.00.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-22-dic-2018-10.35.45.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-22-dic-2018-10.38.23.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-22-dic-2018-10.39.14.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-22-dic-2018-10.40.14.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-22-dic-2018-10.45.25.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/View/BrickComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/BrickComponent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/View/GameApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/GameApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/View/GameFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/GameFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/View/LevelView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/LevelView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/View/PlayerControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/PlayerControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/facade/HomeworkTwoFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/facade/HomeworkTwoFacade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/level/BreakoutLevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/level/BreakoutLevel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/level/EmptyLevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/level/EmptyLevel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/level/Level.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/level/Level.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/update/BrickUpdateReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/update/BrickUpdateReceiver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/logic/update/LevelUpdateReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/update/LevelUpdateReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/fxgl.bundle" beforeDir="false" afterPath="$PROJECT_DIR$/system/fxgl.bundle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/View/BrickComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/View/BrickComponent.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/View/GameApp$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/View/GameApp$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/View/GameApp$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/View/GameApp$2.class" afterDir="false" />
@@ -38,16 +29,7 @@
       <change beforePath="$PROJECT_DIR$/target/classes/View/GameApp$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/View/GameApp$7.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/View/GameApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/View/GameApp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/View/GameFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/View/GameFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/View/LevelView$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/View/LevelView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/View/LevelView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/View/PlayerControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/View/PlayerControl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/controller/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/facade/HomeworkTwoFacade.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/facade/HomeworkTwoFacade.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/logic/level/BreakoutLevel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/logic/level/BreakoutLevel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/logic/level/EmptyLevel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/logic/level/EmptyLevel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/logic/level/Level.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/logic/level/Level.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/logic/update/BrickUpdateReceiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/logic/update/BrickUpdateReceiver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/logic/update/LevelUpdateReceiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/logic/update/LevelUpdateReceiver.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -87,34 +69,37 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/BreakOutLevelTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/logic/ViewUpdates/LevelChangesUpdateReceiver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="38" column="34" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="257">
+              <caret line="35" column="55" selection-start-line="35" selection-start-column="55" selection-end-line="35" selection-end-column="55" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/logic/update/ScoreUpdate.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/logic/ViewUpdates/ChangeBallUpdate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="223">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
               <folding>
-                <element signature="e#342#343#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#392#393#0" expanded="true" />
+                <element signature="e#412#413#0" expanded="true" />
+                <element signature="e#459#460#0" expanded="true" />
+                <element signature="e#486#487#0" expanded="true" />
+                <element signature="e#561#562#0" expanded="true" />
+                <element signature="e#606#607#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/UpdateTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/View/BrickComponent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1139">
-              <caret line="70" column="46" selection-start-line="70" selection-start-column="46" selection-end-line="70" selection-end-column="46" />
+            <state relative-caret-position="238">
+              <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -123,83 +108,78 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/logic/update/LevelUpdate.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controller/Game.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="112" column="5" lean-forward="true" selection-start-line="112" selection-start-column="5" selection-end-line="112" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/logic/ViewUpdates/LevelChangesUpdate.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="85" selection-start-line="11" selection-start-column="85" selection-end-line="11" selection-end-column="85" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/View/GameApp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1290">
+              <caret line="170" selection-start-line="170" selection-end-line="170" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#8981#8982#0" expanded="true" />
+                <element signature="e#9011#9012#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/View/LevelView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="301">
+              <caret line="47" selection-start-line="47" selection-end-line="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/View/GameType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/View/GameFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="314">
+              <caret line="96" column="93" selection-start-line="96" selection-start-column="93" selection-end-line="96" selection-end-column="93" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/logic/ViewUpdates/GoldBrickAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/GameTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
+              <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
               <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/GlassBrickTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/GoldenBrickTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="26" column="15" lean-forward="true" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/WoodenBrickTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="38" column="57" selection-start-line="38" selection-start-column="57" selection-end-line="38" selection-end-column="57" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/MetalBrickTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1122">
-              <caret line="66" column="56" selection-start-line="66" selection-start-column="56" selection-end-line="66" selection-end-column="56" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#167#168#0" expanded="true" />
-                <element signature="e#209#210#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/TestEmptyLevel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="42" column="78" lean-forward="true" selection-start-line="42" selection-start-column="78" selection-end-line="42" selection-end-column="78" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#174#175#0" expanded="true" />
+                <element signature="e#221#222#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -211,6 +191,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -230,13 +211,10 @@
         <option value="$PROJECT_DIR$/src/main/java/logic/update/BrickUpdateReceiver.java" />
         <option value="$PROJECT_DIR$/src/main/java/logic/level/Level.java" />
         <option value="$PROJECT_DIR$/src/main/java/logic/level/EmptyLevel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/logic/update/LevelUpdateReceiver.java" />
         <option value="$PROJECT_DIR$/src/main/java/logic/brick/GoldenBrick.java" />
         <option value="$PROJECT_DIR$/src/main/java/logic/update/GoldenBrickDestroyedUpdate.java" />
         <option value="$PROJECT_DIR$/src/main/java/facade/HomeworkTwoFacade.java" />
         <option value="$PROJECT_DIR$/src/main/java/View/LevelView.java" />
-        <option value="$PROJECT_DIR$/src/main/java/View/BrickComponent.java" />
-        <option value="$PROJECT_DIR$/src/main/java/View/GameApp.java" />
         <option value="$PROJECT_DIR$/src/main/java/View/PlayerControl.java" />
         <option value="$PROJECT_DIR$/src/main/java/View/BallComponent.java" />
         <option value="$PROJECT_DIR$/src/test/java/GoldenBrickTest.java" />
@@ -246,13 +224,32 @@
         <option value="$PROJECT_DIR$/src/test/java/basicTestEmptyLevel.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestEmptyLevel.java" />
         <option value="$PROJECT_DIR$/src/test/java/BreakLevelTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/View/GameFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/logic/level/BreakoutLevel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/Game.java" />
         <option value="$PROJECT_DIR$/src/test/java/GameTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/MetalBrickTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/BreakOutLevelTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/UpdateTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/logic/update/LevelU.java" />
+        <option value="$PROJECT_DIR$/src/main/java/logic/update/LevelChangesUpdateReceiver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/logic/update/winnerUpdate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/logic/update/LevelChangesjava" />
+        <option value="$PROJECT_DIR$/src/main/java/logic/update/LevelUReceiver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/logic/update/LevelUpdate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/logic/update/LevelChangesUpdate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/logic/update/changeBallUpdate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/logic/update/LevelUpdateReceiver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/logic/ViewUpdates/LevelU.java" />
+        <option value="$PROJECT_DIR$/src/main/java/View/GameFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/logic/ViewUpdates/changeBallUpdate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/View/GameApp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/logic/ViewUpdates/GoldBrickAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/logic/ViewUpdates/MaxScoreAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/logic/ViewUpdates/ScoreChangeUpdate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/logic/ViewUpdates/ChangeBallUpdate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/logic/ViewUpdates/LevelChangesUpdate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/Game.java" />
+        <option value="$PROJECT_DIR$/src/main/java/logic/ViewUpdates/LevelChangesUpdateReceiver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/View/BrickComponent.java" />
       </list>
     </option>
   </component>
@@ -278,6 +275,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -325,6 +323,24 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="logic" type="462c0819:PsiDirectoryNode" />
+              <item name="update" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Breakout" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Breakout" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="logic" type="462c0819:PsiDirectoryNode" />
+              <item name="ViewUpdates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Breakout" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Breakout" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="View" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -338,27 +354,21 @@
               <item name="Breakout" type="b2602c69:ProjectViewProjectNode" />
               <item name="Breakout" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Breakout" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Breakout" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="sounds" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545496169480" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545510287616" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -366,6 +376,9 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="logic.update" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\MagicalGirl\IdeaProjects\Breakout\src\main\resources\assets" />
       <recent name="C:\Users\MagicalGirl\IdeaProjects\Breakout\src\main\resources\sounds" />
@@ -384,13 +397,16 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UpdateTest">
-    <configuration name="BreakOutLevelTest.basicTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.GameApp">
+    <configuration name="GameApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="View.GameApp" />
       <module name="Breakout" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BreakOutLevelTest" />
-      <option name="METHOD_NAME" value="basicTest" />
-      <option name="TEST_OBJECT" value="method" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="View.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -435,11 +451,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GameApp" />
         <item itemvalue="JUnit.UpdateTest" />
         <item itemvalue="JUnit.UpdateTest.testGoldenBrick" />
         <item itemvalue="JUnit.UpdateTest.testUpdateScore" />
         <item itemvalue="JUnit.UpdateTest.testMetalBrick" />
-        <item itemvalue="JUnit.BreakOutLevelTest.basicTest" />
       </list>
     </recent_temporary>
   </component>
@@ -475,6 +491,9 @@
       <workItem from="1545451936162" duration="2811000" />
       <workItem from="1545455977327" duration="577000" />
       <workItem from="1545484427802" duration="11379000" />
+      <workItem from="1545496418748" duration="4647000" />
+      <workItem from="1545501218148" duration="31000" />
+      <workItem from="1545507154526" duration="3120000" />
     </task>
     <servers />
   </component>
@@ -511,12 +530,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107142000" />
+    <option name="totallyTimeSpent" value="114940000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29425114" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30786687" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -524,7 +543,7 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49924356" weight="0.3289689" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49924356" visible="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49621785" weight="0.3289689" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -536,7 +555,6 @@
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50378215" side_tool="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49924356" weight="0.3289689" />
-      <window_info anchor="right" id="Coverage" sideWeight="0.502439" side_tool="true" weight="0.32980332" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
       <window_info anchor="right" id="Palette" order="2" />
@@ -545,7 +563,8 @@
       <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info anchor="right" id="Database" order="6" sideWeight="0.49756098" weight="0.32980332" />
       <window_info anchor="right" id="Ant Build" order="7" weight="0.24962178" />
-      <window_info anchor="right" id="Maven" order="8" weight="0.3290469" />
+      <window_info anchor="right" id="Coverage" order="8" sideWeight="0.502439" side_tool="true" weight="0.32980332" />
+      <window_info anchor="right" id="Maven" order="9" weight="0.3290469" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25567323" />
@@ -587,21 +606,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/Runnable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="67" column="25" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/View/BrickType.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/function/Consumer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="127">
@@ -652,21 +656,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/update/LevelUpdateReceiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="91" selection-start-line="10" selection-start-column="91" selection-end-line="10" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/logic/update/MaxLevelScoreReachedUpdate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/update/MetalBrickDestroyedUpdate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
@@ -677,20 +667,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="223">
           <caret line="199" column="7" selection-start-line="199" selection-start-column="7" selection-end-line="199" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/View/LevelView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/update/GoldenBrickDestroyedUpdate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
@@ -705,31 +681,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/View/PlayerControl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="e#1385#1386#0" expanded="true" />
-            <element signature="e#1457#1458#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/View/BallComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/View/GameType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/logic/brick/GlassBrick.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -737,20 +688,6 @@
           <folding>
             <element signature="e#253#254#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/update/BrickUpdateReceiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/update/BrickUpdate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -785,26 +722,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/View/BrickComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/View/GameFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="85" column="33" selection-start-line="85" selection-start-column="33" selection-end-line="85" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/logic/level/LevelBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="56">
@@ -816,18 +733,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="53" selection-start-line="53" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/View/GameApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-294">
-          <caret line="235" column="31" lean-forward="true" selection-start-line="235" selection-start-column="31" selection-end-line="235" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#8580#8581#0" expanded="true" />
-            <element signature="e#8605#8606#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -851,10 +756,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/Game.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/BreakOutLevelTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="90" column="10" selection-start-line="90" selection-start-column="10" selection-end-line="90" selection-end-column="10" />
+        <state relative-caret-position="459">
+          <caret line="38" column="34" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -863,7 +768,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GameTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="34">
           <caret line="15" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -874,7 +779,7 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/GlassBrickTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -883,8 +788,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GoldenBrickTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="26" column="15" lean-forward="true" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
+        <state relative-caret-position="340">
+          <caret line="26" column="15" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -893,7 +798,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/WoodenBrickTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
+        <state relative-caret-position="561">
           <caret line="38" column="57" selection-start-line="38" selection-start-column="57" selection-end-line="38" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -903,47 +808,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/MetalBrickTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
+        <state relative-caret-position="1020">
           <caret line="66" column="56" selection-start-line="66" selection-start-column="56" selection-end-line="66" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#167#168#0" expanded="true" />
-            <element signature="e#209#210#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/TestEmptyLevel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="78" lean-forward="true" selection-start-line="42" selection-start-column="78" selection-end-line="42" selection-end-column="78" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/update/LevelUpdate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/update/ScoreUpdate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="e#342#343#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/BreakOutLevelTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="38" column="34" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
+        <state relative-caret-position="561">
+          <caret line="42" column="78" selection-start-line="42" selection-start-column="78" selection-end-line="42" selection-end-column="78" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -952,8 +828,211 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/UpdateTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
+        <state relative-caret-position="526">
           <caret line="70" column="46" selection-start-line="70" selection-start-column="46" selection-end-line="70" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/update/BrickUpdateReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/update/BrickUpdate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/ViewUpdates/LevelUReceiver.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/ViewUpdates/LevelU.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/update/LevelUpdate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/update/LevelUpdateReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/update/GoldenBrickDestroyedUpdate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/update/MetalBrickDestroyedUpdate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/View/BallComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/View/PlayerControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-18">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/update/ScoreUpdate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding>
+            <element signature="e#342#343#0" expanded="true" />
+            <element signature="e#395#396#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/ViewUpdates/WinnerUpdate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/ViewUpdates/ScoreChangeUpdate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding>
+            <element signature="e#229#230#0" expanded="true" />
+            <element signature="e#273#274#0" expanded="true" />
+            <element signature="e#465#466#0" expanded="true" />
+            <element signature="e#499#500#0" expanded="true" />
+            <element signature="e#574#575#0" expanded="true" />
+            <element signature="e#620#621#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/ViewUpdates/MaxScoreAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="21" column="4" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+          <folding>
+            <element signature="e#228#229#0" expanded="true" />
+            <element signature="e#256#257#0" expanded="true" />
+            <element signature="e#424#425#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/ViewUpdates/GoldBrickAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+          <folding>
+            <element signature="e#174#175#0" expanded="true" />
+            <element signature="e#221#222#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/ViewUpdates/ChangeBallUpdate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#392#393#0" expanded="true" />
+            <element signature="e#412#413#0" expanded="true" />
+            <element signature="e#459#460#0" expanded="true" />
+            <element signature="e#486#487#0" expanded="true" />
+            <element signature="e#561#562#0" expanded="true" />
+            <element signature="e#606#607#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/ViewUpdates/LevelChangesUpdate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="85" selection-start-line="11" selection-start-column="85" selection-end-line="11" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="112" column="5" lean-forward="true" selection-start-line="112" selection-start-column="5" selection-end-line="112" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/ViewUpdates/LevelChangesUpdateReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="35" column="55" selection-start-line="35" selection-start-column="55" selection-end-line="35" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/View/GameType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/View/GameFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="96" column="93" selection-start-line="96" selection-start-column="93" selection-end-line="96" selection-end-column="93" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/View/GameApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1290">
+          <caret line="170" selection-start-line="170" selection-end-line="170" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#8981#8982#0" expanded="true" />
+            <element signature="e#9011#9012#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/View/LevelView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/View/BrickComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

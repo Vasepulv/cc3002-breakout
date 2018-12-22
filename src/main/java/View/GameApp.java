@@ -9,13 +9,12 @@ import com.almasb.fxgl.physics.HitBox;
 import com.almasb.fxgl.physics.PhysicsComponent;
 import com.almasb.fxgl.settings.GameSettings;
 import facade.HomeworkTwoFacade;
-import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
+import logic.ViewUpdates.*;
 import logic.level.Level;
 import logic.update.*;
 
@@ -23,7 +22,6 @@ import java.util.Map;
 import java.util.Observable;
 import java.util.Observer;
 import java.util.Random;
-import java.util.function.Predicate;
 
 /**
  * This class represents the GUI of the game.
@@ -31,7 +29,7 @@ import java.util.function.Predicate;
  * @author Valentina Sepulveda
  * @version 1.0
  */
-public class GameApp extends GameApplication implements Observer, LevelUpdateReceiver {
+public class GameApp extends GameApplication implements Observer, LevelChangesUpdateReceiver {
     private LevelView levelView;
     private HomeworkTwoFacade controller;
     private boolean firstLevel;
@@ -71,9 +69,6 @@ public class GameApp extends GameApplication implements Observer, LevelUpdateRec
     private void initLevel() {
         firstLevel=true;
         controller=new HomeworkTwoFacade();
-        Level level=controller.getCurrentLevel();
-        levelView =new LevelView(level);
-        levelView.init();
     }
 
     @Override
@@ -96,14 +91,6 @@ public class GameApp extends GameApplication implements Observer, LevelUpdateRec
 
        hBox.getChildren().addAll(labelScore, score, labelBalls, balls, labelTotalScore, totalScore, labelLevel, actualLevel);
         getGameScene().addUINode(hBox);
-
-        int i=controller.getBallsLeft();
-        for(int j=0;j<i;j++){
-            Circle circle=new Circle(10,Color.LAVENDER);
-            circle.setCenterY(20);
-            circle.setCenterX(420+40*j);
-            getGameScene().addUINode(circle);
-        }
     }
 
     @Override
@@ -181,7 +168,6 @@ public class GameApp extends GameApplication implements Observer, LevelUpdateRec
             protected void onHitBoxTrigger(Entity ball, Entity wall, HitBox boxA, HitBox boxB) {
                 if(boxB.getName().equals("BOT")){
                     ball.removeFromWorld();
-                    addBall();
                 }
             }
         });
@@ -206,7 +192,7 @@ public class GameApp extends GameApplication implements Observer, LevelUpdateRec
             Entity ball=GameFactory.newBall(player.getX()+40,player.getY()-20);
             getGameWorld().addEntity(ball);
             controller.dropBall();
-            getGameState().increment("Balls",-1);
+            //getGameState().increment("Balls",-1);
         }
         else if(getGameWorld().getSingleton(GameType.BALL).isPresent()){
 
@@ -223,7 +209,6 @@ public class GameApp extends GameApplication implements Observer, LevelUpdateRec
                 startNewGame();
             }
             else{
-                int score=getGameState().getInt("Score");
                 exit();
             }
         });
@@ -244,31 +229,35 @@ public class GameApp extends GameApplication implements Observer, LevelUpdateRec
 
     @Override
     public void update(Observable o, Object arg) {
-        if(arg instanceof LevelUpdate){
-            ((LevelUpdate) arg).accept(this);
+        if(arg instanceof LevelChangesUpdate){
+            ((LevelChangesUpdate) arg).accept(this);
         }
 
     }
 
-
     @Override
-    public void scoreUpdate(ScoreUpdate scoreUpdate) {
-        getGameState().setValue("Score",scoreUpdate.getScore());
-        getGameState().setValue("TotalScore",scoreUpdate.getScore());
+    public void changeBallUpdate(ChangeBallUpdate changeBallUpdate) {
+        getGameState().increment("Balls",changeBallUpdate.getSign());
     }
 
     @Override
-    public void maxLevelScoreUpdate(MaxLevelScoreReachedUpdate maxLevelScoreReachedUpdate) {
-     showWinner();
+    public void winnerUpdate() {
+        showWinner();
     }
 
     @Override
-    public void metalBrickDestroyedUpdate(MetalBrickDestroyedUpdate metalBrickDestroyedUpdate) {
-        getGameState().increment("Balls",1);
+    public void scoreChangeUpdate(ScoreChangeUpdate scoreChangeUpdate) {
+        getGameState().increment("Score", scoreChangeUpdate.getScoreUpdate().getScore());
+        getGameState().increment("TotalScore", scoreChangeUpdate.getScoreUpdate().getScore());
     }
 
     @Override
-    public void goldenBrickDestroyedUpdate(GoldenBrickDestroyedUpdate goldenBrickDestroyedUpdate) {
+    public void levelChanges(MaxScoreAdapter maxScoreAdapter) {
+        setLevelView(controller.getCurrentLevel());
+    }
+
+    @Override
+    public void goldBrickDestroyed(GoldBrickAdapter goldBrickAdapter) {
         getGameWorld().getSingleton(GameType.PLAYER).get().getComponent(PlayerControl.class).change();
     }
 }
