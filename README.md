@@ -1,4 +1,4 @@
-The code used here ,save for the View and the AdapterUpdates classes and Interfaces, is not mine and is only used for educational purposes.
+The code used here ,save for the View and the AdapterUpdates classes and Interfaces, is not mine and it belongs to Juan Pablo Silva and is only used for educational purposes.
 This new version has modified the previous version to fit better with the GUI.
 
 This code is a representation of a BreakOut game, using Java FXGL to do so. The model used here is the Model-View-Controller, with the
